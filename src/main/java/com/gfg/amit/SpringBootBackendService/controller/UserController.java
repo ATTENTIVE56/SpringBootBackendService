@@ -15,21 +15,24 @@ public class UserController {
 
     @GetMapping("/users")
     public List<User> findAllUsers(){
+        return null;
     }
 
     @GetMapping("/user/{id}")
     public User getUserById(@PathVariable("id") Long id){
-
+        return null;
     }
 
     @PostMapping("/user")
     public User createUser(@RequestBody User user){
 
+        return user;
     }
 
     @PutMapping("/user")
     public User updateUser(@RequestBody User user){
 
+        return user;
     }
 
     @DeleteMapping("/user/{id}")
