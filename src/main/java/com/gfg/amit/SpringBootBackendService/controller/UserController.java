@@ -15,28 +15,28 @@ public class UserController {
 
     @GetMapping("/users")
     public List<User> findAllUsers(){
-        return null;
+        return userDaoService.findAllUsers();
     }
 
     @GetMapping("/user/{id}")
     public User getUserById(@PathVariable("id") Long id){
-        return null;
+        return userDaoService.getUserById(id);
     }
 
     @PostMapping("/user")
     public User createUser(@RequestBody User user){
 
-        return user;
+        return userDaoService.createUser(user);
     }
 
     @PutMapping("/user")
     public User updateUser(@RequestBody User user){
 
-        return user;
+        return userDaoService.updateUser(user);
     }
 
     @DeleteMapping("/user/{id}")
-    public void deleteUserById(@PathVariable("id") Long id){
-
+    public User deleteUserById(@PathVariable("id") Long id){
+           return userDaoService.deleteUser(id);
     }
 }
